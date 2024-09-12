@@ -1,6 +1,7 @@
 <div class="content">
     <ag-grid-angular
-      class="ag-theme-alpine"
+    [paginationPageSize]="10"
+      class="ag-theme-alpine ag-theme-quartz-dark"
       [rowData]="rowData$ | async"  
       [columnDefs]="columnDefs"
       rowSelection="multiple"

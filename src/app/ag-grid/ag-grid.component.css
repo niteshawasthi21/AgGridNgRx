@@ -1,6 +1,5 @@
 .content {
     width: 80%;            /* Smaller width */
-    height: 100vh;          /* Smaller height */
     background-color: #004d4d; /* Dark teal background */
     padding: 10px;         /* Padding for spacing */
     margin: 20px auto;     /* Center the grid */
@@ -8,5 +7,16 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   }
   
+.ag-theme-quartz,
+.ag-theme-quartz-dark {
+    /* Changes the color of the grid text */
+    --ag-foreground-color: rgb(14, 68, 145);
+    /* Changes the color of the grid background */
+    --ag-background-color: rgb(241, 247, 255);
+    /* Changes the header color of the top row */
+    --ag-header-background-color: rgb(228, 237, 250);
+    /* Changes the hover color of the row*/
+    --ag-row-hover-color: rgb(216, 226, 255);     
+}
    
   

@@ -7,18 +7,34 @@ import { DocumentRow } from '../document-row.model';
 })
 export class DocumentService {
   getDocuments(): Observable<DocumentRow[]> {
-    // Simulate an API call with static data
-    const documents: DocumentRow[] =  this.generateData()
-    return of(documents);
+    return of(this.generateData()); // Simulate API response
   }
 
+  deleteDocument(id: number): Observable<void> {
+    // Simulate API call delay
+    return new Observable(observer => {
+      setTimeout(() => {
+        observer.next();
+        observer.complete();
+      }, 500);
+    });
+  }
 
+  updateDocumentType(id: number, documentType: string): Observable<void> {
+    // Simulate API call delay
+    return new Observable(observer => {
+      setTimeout(() => {
+        observer.next();
+        observer.complete();
+      }, 500);
+    });
+  }
 
-
-  generateData() {
-    let rowData:DocumentRow[]=[];
+  private generateData(): DocumentRow[] {
+    const rowData: DocumentRow[] = [];
     for (let i = 0; i < 30; i++) {
       rowData.push({
+        id: i + 1,
         documentType: ['PDF', 'Word', 'Excel', 'Image', 'Text'][Math.floor(Math.random() * 5)],
         fileName: `Document${i + 1}`,
         fileExtension: ['pdf', 'docx', 'xlsx', 'jpg', 'txt'][Math.floor(Math.random() * 5)],
@@ -32,7 +48,7 @@ export class DocumentService {
     return rowData;
   }
 
-   randomDate() {
+  private randomDate(): string {
     const start = new Date(2020, 0, 1);
     const end = new Date();
     const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));

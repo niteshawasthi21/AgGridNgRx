@@ -1,4 +1,5 @@
 export interface DocumentRow {
+    id:number,
     documentType: string;        // Type of the document (e.g., PDF, Word, Excel)
     fileName: string;            // Name of the file
     fileExtension: string;       // File extension (e.g., pdf, docx, xlsx)
