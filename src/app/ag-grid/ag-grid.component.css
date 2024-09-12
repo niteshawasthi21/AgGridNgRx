@@ -1,0 +1,12 @@
+.content {
+    width: 80%;            /* Smaller width */
+    height: 100vh;          /* Smaller height */
+    background-color: #004d4d; /* Dark teal background */
+    padding: 10px;         /* Padding for spacing */
+    margin: 20px auto;     /* Center the grid */
+    border-radius: 10px;   /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  }
+  
+   
+  

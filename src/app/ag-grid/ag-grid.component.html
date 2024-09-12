@@ -1,0 +1,12 @@
+<div class="content">
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      [rowData]="rowData$ | async"  
+      [columnDefs]="columnDefs"
+      rowSelection="multiple"
+      [animateRows]="true"
+      [pagination]="true"
+      [domLayout]="'autoHeight'"
+    >
+    </ag-grid-angular>
+</div>
